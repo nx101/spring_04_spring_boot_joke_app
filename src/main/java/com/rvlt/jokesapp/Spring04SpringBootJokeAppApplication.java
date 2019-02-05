@@ -10,5 +10,7 @@ public class Spring04SpringBootJokeAppApplication {
         SpringApplication.run(Spring04SpringBootJokeAppApplication.class, args);
     }
 
+
+
 }
 
