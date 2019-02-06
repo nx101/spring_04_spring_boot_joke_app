@@ -10,9 +10,17 @@ public class JokeServiceImp implements JokeService {
 
     private final ChuckNorrisQuotes chuckNorrisQuotes;
 
-    public JokeServiceImp(){
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+
+    // Inject via Constructor
+    // To provide a ChuckNorrisQuotes bean in the context,
+    // we use Java based config
+    public JokeServiceImp(ChuckNorrisQuotes chuckNorrisQuotes) {
+        this.chuckNorrisQuotes = chuckNorrisQuotes;
     }
+
+
+    // Instantiate at constructor
+    //public JokeServiceImp(){ this.chuckNorrisQuotes = new ChuckNorrisQuotes(); }
 
     @Override
     public String getJoke() {
